@@ -1,0 +1,282 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(69, 86, 102) 0%,
+    rgb(34, 34, 34) 90%
+  );
+  margin: 0;
+  height: 100vh;
+  color: white;
+}
+
+/* Formulaire de contact*/
+
+.formulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.box {
+  position: relative;
+  width: 420px;
+  height: 460px;
+  background-color: grey;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #12ea65, #28e471);
+  animation: ligneanim 6s linear infinite;
+  transform-origin: bottom right;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #12ea65, #28e471);
+  animation: ligneanim 6s linear infinite;
+  transform-origin: bottom right;
+  animation-delay: -3s;
+}
+
+@keyframes ligneanim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  position: absolute;
+  background: black;
+  z-index: 10;
+  border-radius: 8px;
+  padding: 30px 70px;
+  display: flex;
+  flex-direction: column;
+  inset: 2px;
+}
+
+.form-group {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.form-group input {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  z-index: 10;
+}
+
+.form-group label {
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  pointer-events: none;
+  transform: 0.5s;
+}
+
+.form-group i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.form-group input:valid ~ i,
+.form-group input:focus ~ i {
+  height: 34px;
+}
+
+.message {
+  padding-top: 25px;
+}
+
+.fenetremess {
+  width: 90%;
+}
+
+.btn-2 {
+  scale: 0.5;
+  position: absolute;
+  font-family: inherit;
+  font-size: 18px;
+  background: #000;
+  color: white;
+  padding: 15px 24px 15px 24px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-2 span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-2 svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-2:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn-2:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn-2:hover span {
+  transform: translateX(5em);
+}
+
+.btn-2:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.retour {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.btn {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #48ff00,
+    #00ffd5,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #fffb00,
+    #00ffd5,
+    #fffb00,
+    #48ff00
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/*transition page: */
+
+.button .buttons {
+  margin-top: 2.25em;
+}
+
+.buttons .button {
+  margin-left: 150px;
+}
+
+.button {
+  display: fixed;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid;
+  padding: 0.6em 0.7em;
+  transition-property: background, color;
+  transition-duration: 150ms;
+  white-space: nowrap;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: gray;
+}
