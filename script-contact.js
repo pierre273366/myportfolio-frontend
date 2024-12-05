@@ -14,16 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.querySelector('input[name="email"]').value;
     const message = document.querySelector('textarea[name="message"]').value;
 
-    fetch("https://myportfolio-backend-sigma.vercel.app/mail/send", {
+    fetch("https://myportfolio-backend-sigma.vercel.app/mail/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, societe, phone, email, message }),
+      body: JSON.stringify({
+        name: name,
+        societe: societe,
+        phone: phone,
+        email: email,
+        message: message,
+      }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          return response.json().then((err) => {
+            throw new Error(err.error);
+          });
+        }
+        return response.json();
+      })
       .then((data) => {
-        if (data.message === "Email sent successfully!") {
+        if (data.success) {
           alert("Email sent successfully!");
         } else {
           alert("Failed to send email. Error: " + data.error);
