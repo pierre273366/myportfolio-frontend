@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.querySelector('input[name="email"]').value;
     const message = document.querySelector('textarea[name="message"]').value;
 
-    fetch("http://localhost:6000//mail/send", {
+    fetch("https://myportfolio-backend-sigma.vercel.app/mail/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
