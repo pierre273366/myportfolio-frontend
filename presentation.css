@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 190px;
+  margin-top: 350px;
 }
 
 .btn {
@@ -106,14 +106,11 @@ body {
   justify-content: end;
   align-items: end;
   position: static;
+  margin-right: 50px;
 }
 
 .button .buttons {
   margin-top: 2.25em;
-}
-
-.buttons .button {
-  margin-left: 150px;
 }
 
 .button {

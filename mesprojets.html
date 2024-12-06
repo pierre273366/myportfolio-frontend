@@ -20,54 +20,92 @@
   <body>
     <h1 class="titreProjets neondeux">Projets</h1>
     <div class="projets">
+      <!-- Conteneur principal du carrousel -->
       <div class="swiper">
         <div class="swiper-wrapper">
+          <!-- Slide 1 -->
           <div class="swiper-slide">
             <a href="https://booktrain-front.vercel.app/" target="_blank">
-              <img class="tickethack" src="./images/tickets.png" />
+              <img
+                class="tickethack"
+                src="./images/tickets.png"
+                alt="Site de réservation en ligne"
+              />
             </a>
             <p>Site de réservation en ligne</p>
             <p>Projet de formation</p>
-            <ion-icon class="java" name="logo-nodejs"></ion-icon>
+            <ion-icon class="java" name="logo-javascript"></ion-icon>
+            <img class="node" src="./images/Node.js.png" />
           </div>
 
+          <!-- Slide 2 -->
           <div class="swiper-slide">
             <a href="https://mymov-frontend.vercel.app/" target="_blank">
-              <img class="tickethack" src="./images/mymovie.png" />
+              <img
+                class="tickethack"
+                src="./images/mymovie.png"
+                alt="Site de recommandation de film"
+              />
             </a>
             <p>Site de recommandation de film</p>
             <p>Projet de formation</p>
             <ion-icon class="react" name="logo-react"></ion-icon>
+            <div class="sous-logo">
+              <img class="next-js" src="./images/next-js.svg" />
+              <img class="next-js" src="./images/Redux.png" />
+            </div>
           </div>
 
+          <!-- Slide 3 -->
           <div class="swiper-slide">
-            <img class="tickethack" src="./images/morningnews.png" />
+            <img
+              class="tickethack"
+              src="./images/morningnews.png"
+              alt="Site d'actualités"
+            />
             <p>Site d'actualités</p>
             <p>Projet de formation</p>
             <ion-icon class="react" name="logo-react"></ion-icon>
+            <img class="next-js" src="./images/next-js.svg" />
           </div>
+
+          <!-- Slide 4 -->
           <div class="swiper-slide">
-            <img class="locapic" src="./images/locapic.jpeg" />
+            <img
+              class="locapic"
+              src="./images/locapic.jpeg"
+              alt="Application de localisation"
+            />
+
             <p>Application de localisation</p>
             <p>Projet de formation</p>
-            <img class="qrcode" src="./images/locapicqrcode.png" />
+            <img
+              class="qrcode"
+              src="./images/locapicqrcode.png"
+              alt="QR code"
+            />
             <ion-icon class="react" name="logo-react"></ion-icon>
           </div>
         </div>
+
+        <!-- Pagination (les points qui indiquent l'index du slide) -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+
     <div class="retour">
       <nav>
         <a href="skills.html" data-link="skills" class="button">←</a>
       </nav>
       <button href="index.html" class="btn button-85" onclick="goToHome()">
-        return
+        Retour
       </button>
       <nav>
         <a href="contact.html" data-link="contact" class="button">→</a>
       </nav>
     </div>
 
+    <!-- Scripts nécessaires -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

@@ -15,6 +15,7 @@ body {
   font-size: 70px;
   text-align: center;
   margin-top: 50px;
+  padding-bottom: 40px;
 }
 
 .neondeux {
@@ -69,54 +70,130 @@ body {
   }
 }
 
-.projets {
+/* carroussel : */
+/* Conteneur du carrousel */
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide du carrousel */
+/* Conteneur du carrousel */
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet flou sur l'arrière-plan de chaque slide */
+.swiper-slide {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  text-align: center;
+  background-color: rgba(29, 27, 27, 0.8); /* Blanc semi-transparent */
+  backdrop-filter: blur(10px); /* Application du flou */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.swiper .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 500px;
-  height: 600px;
+.swiper-slide:hover {
+  transform: scale(1.05); /* Agrandissement au survol */
 }
 
+/* Image dans chaque slide */
 .tickethack {
-  width: 500px;
-  height: 400px;
+  width: 90%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Assure que les images ne se déforment pas */
+}
+
+.swiper-slide:hover .tickethack,
+.swiper-slide:hover .locapic {
+  transform: scale(1.1); /* Agrandissement de l'image au survol */
+}
+
+/* Texte sous les images */
+.swiper-slide p {
+  font-size: 18px;
+  color: #fff; /* Texte en blanc pour contraster avec le fond flouté */
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Ombre légère pour le texte */
+}
+
+/* Pagination (points sous le carrousel) */
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  opacity: 1 !important;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(91, 235, 115); /* Couleur de l'élément actif */
 }
 
 .locapic {
-  height: 400px;
-  width: 200px;
-  border-radius: 65px;
+  border-radius: 35px;
+  height: 200px;
+  width: 100px;
 }
 
 .react {
   color: #03d1f6;
   font-size: 30px;
+  margin-top: 10px;
 }
 
 .java {
   color: yellow;
   font-size: 30px;
+  margin-top: 10px;
+}
+
+.sous-logo {
+  display: flex;
+  align-items: center;
+}
+
+.next-js {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.node {
+  width: 30px;
+  margin-top: 10px;
 }
 
 .qrcode {
-  width: 100px;
+  width: 90px;
 }
 
-p {
-  color: white;
-}
+/*bouton:*/
 
 .retour {
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 90px;
   display: flex;
 }
 
@@ -213,4 +290,33 @@ p {
 
 .button:hover {
   background: grey;
+}
+
+/* Responsive Design pour petits écrans */
+@media (max-width: 768px) {
+  .swiper {
+    height: 300px;
+  }
+
+  .swiper-slide p {
+    font-size: 14px;
+  }
+
+  .swiper-slide ion-icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 250px;
+  }
+
+  .swiper-slide p {
+    font-size: 12px;
+  }
+
+  .swiper-slide ion-icon {
+    font-size: 20px;
+  }
 }

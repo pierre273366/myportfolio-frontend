@@ -253,6 +253,45 @@ body {
   border-radius: 10px;
 }
 
+/*notif:*/
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50px); /* Initialement décalée vers le haut */
+  padding: 15px 30px;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  opacity: 0; /* Initialement invisible */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none; /* Empêche la notification de bloquer d'autres éléments interactifs */
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Ramené à sa position normale */
+}
+
+.notification.error {
+  background-color: #f44336; /* Rouge pour erreur */
+}
+
+.notification p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.notification.success {
+  background-color: #4caf50; /* Vert pour succès */
+}
+
 /*transition page: */
 
 .button .buttons {
