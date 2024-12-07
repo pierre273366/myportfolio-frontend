@@ -12,15 +12,43 @@ body {
   color: white;
 }
 
-/*Presentation*/
-
-.presentation {
-  font-size: 20px;
-  text-align: justify;
+#content {
+  justify-content: center;
+  align-items: center;
 }
 
-.whoiam {
-  font-family: Palatino, URW Palladio L, sans-serif;
+#presentation {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  font-size: 20px;
+}
+
+/* Animation pour l'apparition du texte */
+.animated-text {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.animated-text.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animated-text.visible {
+  animation: zoomInSlideUp 2s ease forwards;
+}
+
+@keyframes zoomInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /*btn retour :*/
@@ -47,7 +75,7 @@ body {
   touch-action: manipulation;
 }
 
-.button-85:before {
+.button-retour:before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -87,7 +115,7 @@ body {
   }
 }
 
-.button-85:after {
+.button-retour:after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -106,7 +134,6 @@ body {
   justify-content: end;
   align-items: end;
   position: static;
-  margin-right: 50px;
 }
 
 .button .buttons {

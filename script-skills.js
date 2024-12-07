@@ -60,7 +60,7 @@ function moveReact() {
   let id = setInterval(frame, 100);
 
   function frame() {
-    if (width >= 20) {
+    if (width >= 30) {
       clearInterval(id);
     } else {
       width++;

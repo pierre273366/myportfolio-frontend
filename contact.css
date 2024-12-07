@@ -201,7 +201,7 @@ body {
   touch-action: manipulation;
 }
 
-.button-85:before {
+.button-retour:before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -241,7 +241,7 @@ body {
   }
 }
 
-.button-85:after {
+.button-retour:after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -259,7 +259,7 @@ body {
   position: fixed;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%) translateY(-50px); /* Initialement décalée vers le haut */
+  transform: translateX(-50%) translateY(-50px);
   padding: 15px 30px;
   background-color: transparent;
   backdrop-filter: blur(30px);
@@ -268,18 +268,18 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 9999;
-  opacity: 0; /* Initialement invisible */
+  opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   pointer-events: none; /* Empêche la notification de bloquer d'autres éléments interactifs */
 }
 
 .notification.show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Ramené à sa position normale */
+  transform: translateX(-50%) translateY(0);
 }
 
 .notification.error {
-  background-color: #f44336; /* Rouge pour erreur */
+  background-color: #f44336;
 }
 
 .notification p {
@@ -289,7 +289,7 @@ body {
 }
 
 .notification.success {
-  background-color: #4caf50; /* Vert pour succès */
+  background-color: #4caf50;
 }
 
 /*transition page: */

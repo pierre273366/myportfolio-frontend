@@ -4,8 +4,7 @@ function goToHome() {
 
 /*formulaire pour envoie de mail :*/
 
-emailjs.init("xJaV1q3AY-GPUYhsq"); // Remplacez "votre_user_id" par votre User ID EmailJS
-
+emailjs.init("xJaV1q3AY-GPUYhsq");
 document.querySelector(".btn-2").addEventListener("click", (e) => {
   console.log("clic");
   e.preventDefault(); // Empêche le formulaire de se soumettre normalement
@@ -33,15 +32,14 @@ document.querySelector(".btn-2").addEventListener("click", (e) => {
       // Afficher la notification avec animation
       setTimeout(() => {
         notification.classList.add("show");
-      }, 10); // Petite temporisation pour garantir que la classe 'show' soit ajoutée après l'ajout dans le DOM
+      }, 10);
 
-      // Ajouter un délai pour cacher la notification après 3 secondes
       setTimeout(() => {
         notification.classList.remove("show");
         // La supprimer complètement du DOM après l'animation
         setTimeout(() => {
           notification.remove();
-        }, 500); // Délai pour laisser le temps à l'animation de disparaître
+        }, 500);
       }, 3000);
 
       // Réinitialiser les champs du formulaire
@@ -67,7 +65,6 @@ document.querySelector(".btn-2").addEventListener("click", (e) => {
         notification.classList.add("show");
       }, 10);
 
-      // Ajouter un délai pour cacher la notification après 3 secondes
       setTimeout(() => {
         notification.classList.remove("show");
         // La supprimer complètement du DOM après l'animation
