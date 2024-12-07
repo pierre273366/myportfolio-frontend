@@ -285,31 +285,88 @@ body {
   background: grey;
 }
 
-/* Responsive Design pour petits écrans */
-@media (max-width: 768px) {
+/* Media Queries pour Smartphones */
+
+@media screen and (max-width: 480px) {
+  body {
+    height: auto;
+    padding: 0 1rem;
+    display: block;
+  }
+
+  .titreProjets {
+    font-size: 30px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .neondeux {
+    font-size: 22px;
+  }
+
   .swiper {
     height: 300px;
+    margin-top: 10px;
   }
 
   .swiper-slide p {
     font-size: 14px;
   }
 
-  .swiper-slide ion-icon {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .swiper {
-    height: 250px;
+  .tickethack {
+    width: 80%;
+    max-width: 250px;
   }
 
-  .swiper-slide p {
-    font-size: 12px;
+  .locapic {
+    height: 120px;
+    width: 80px;
   }
 
-  .swiper-slide ion-icon {
+  .react,
+  .java {
     font-size: 20px;
+  }
+
+  .next-js,
+  .node {
+    width: 25px;
+  }
+
+  .qrcode {
+    width: 60px;
+  }
+
+  .btn {
+    padding: 0.6em 1.5em;
+    font-size: 14px;
+  }
+
+  .retour {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .button-retour:before {
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+  }
+
+  .button-retour:after {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Ajustement de l'animation des boutons */
+  .button {
+    padding: 0.5em 1em;
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .button:hover {
+    background: #333;
   }
 }

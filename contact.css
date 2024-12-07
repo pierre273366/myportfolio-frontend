@@ -319,3 +319,58 @@ body {
 .button:hover {
   background: gray;
 }
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+  .formulaire {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .form {
+    padding: 20px 40px;
+    width: 90%;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .form-group input {
+    padding: 10px;
+  }
+
+  .btn-2 {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .notification {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px 30px;
+  }
+
+  .btn-2 {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .btn {
+    padding: 0.4em 1.5em;
+  }
+}

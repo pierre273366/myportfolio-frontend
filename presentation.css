@@ -157,3 +157,63 @@ body {
 .button:hover {
   background: grey;
 }
+
+/* 1. Media Queries pour Smartphones */
+
+@media screen and (max-width: 480px) {
+  body {
+    height: auto;
+    padding: 0 1rem;
+    display: block;
+  }
+
+  #presentation {
+    padding: 10px;
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* Animation texte */
+  .animated-text {
+    font-size: 16px;
+  }
+
+  /* .btn */
+  .btn {
+    padding: 0.6em 1.2em;
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  /* .button-retour */
+  .retour {
+    margin-top: 50px;
+  }
+
+  .button-retour:before {
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+  }
+
+  .button-retour:after {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .button */
+  .button {
+    padding: 0.4em 1em;
+    font-size: 14px;
+  }
+
+  .button:hover {
+    background: #333;
+  }
+
+  /* Transition page */
+  #next {
+    justify-content: center;
+    align-items: center;
+  }
+}

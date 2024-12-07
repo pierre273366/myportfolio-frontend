@@ -441,3 +441,53 @@ ul li.active a {
   transform: perspective(1300px) rotateY(20deg) translateY(10px)
     translateZ(340px) scale(0.5);
 }
+
+/* Media Queries pour smartphones */
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow: auto;
+  }
+
+  .navbar {
+    height: 4rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .hamburger-menu {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  h1 .letter {
+    font-size: 120px;
+  }
+
+  h1 .letter-2 {
+    font-size: 100px;
+    transform: translate(-0.5rem, 1rem) rotate(5deg);
+  }
+
+  #soustitre {
+    font-size: 12px;
+  }
+
+  .overlay {
+    padding: 2rem 1rem;
+  }
+
+  .social-links a {
+    font-size: 40px;
+  }
+
+  .links a {
+    font-size: 1.5rem;
+  }
+}
