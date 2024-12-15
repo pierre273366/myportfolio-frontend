@@ -321,47 +321,19 @@ body {
 }
 
 /* Media Queries pour mobile */
-@media (max-width: 768px) {
-  .formulaire {
-    padding: 20px;
-    min-height: auto;
-  }
 
-  .box {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-  }
-
+@media (max-width: 480px) {
   .form {
-    padding: 20px 40px;
-    width: 90%;
+    padding: 15px;
   }
 
   .form-group {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .form-group input {
     padding: 10px;
-  }
-
-  .btn-2 {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .notification {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .form {
-    padding: 15px 30px;
   }
 
   .btn-2 {

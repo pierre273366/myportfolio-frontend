@@ -289,4 +289,11 @@ body {
   .button:hover {
     background: #333;
   }
+
+  /* Flèches pour navigation */
+  .arrow-next,
+  .arrow-prev {
+    font-size: 25px;
+    bottom: 15px;
+  }
 }

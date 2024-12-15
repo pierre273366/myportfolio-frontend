@@ -215,5 +215,24 @@ body {
   #next {
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 10;
+  }
+
+  /* Flèche de navigation vers Skills */
+  .arrow-next {
+    font-size: 30px;
+    color: #12ea65;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    z-index: 10;
+  }
+
+  .arrow-next:hover {
+    color: #00ff55;
   }
 }
